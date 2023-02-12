@@ -18,7 +18,7 @@ buildscript {
     ext.material_version = "1.2.1"
     ext.glide_version = "4.11.0"
 
-    ext.room_version = "2.4.0"
+    ext.room_version = "2.3.0"
 
     ext.retrofit_version = "2.9.0"
     ext.logging_interceptor_version = "4.8.0"
@@ -37,11 +37,13 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
-        
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:4.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -52,8 +54,10 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
 }
 
